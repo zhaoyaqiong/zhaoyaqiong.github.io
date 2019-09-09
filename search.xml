@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
+  <entry>
+    <title><![CDATA[CTF入坑]]></title>
+    <url>%2F2019%2F09%2F05%2FCTF%E5%85%A5%E5%9D%91%2F</url>
+    <content type="text"><![CDATA[CTF入坑一直对网络安全比较感兴趣，但是大学期间没怎么研究过。这次机缘巧合下，决心下功夫研究研究，万一之后转了安全方面呢。 开一个Blog记录一下踩坑，踩雷的历程吧。希望多年后的我看见当初这篇博客能够漏出一个比较开心的笑容吧。 在网上看了好多资源，好多都是推荐ctf-wiki的。进去翻了翻，大致了解了一下。准备先根据wiki所推荐的学习平台，了解一下大致的方向，毕竟自己本科也是计算机系的学生，很多内容应该是有重叠的。 发现wiki中给出了几个CTF OJ。因为自己有ACM竞赛的经验，所以，从刷题开始吧。 在wiki中找到 https://cgctf.nuptsast.com/challenges 他们的about页面挂了，也不太清楚是谁在维护。 关于视频课程，现在看到 i春秋 里面好像还挺多的，先看看吧。如果质量一般的话，再换适合自己的。 嗯，目前计划是一边刷题然后根据刷题给的反馈来补充自己的知识吧。应该是两条路径下来，一边是刷题的过程和思考，一边是对于所遗漏的知识的学习。]]></content>
+      <categories>
+        <category>CTF入坑之路</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
 </search>
