@@ -60,7 +60,7 @@
 
 
 
-  <meta name="keywords" content="Outis, Blog">
+  <meta name="keywords" content="d3,github,">
 
 
 
@@ -71,16 +71,24 @@
 
 
 
-<meta name="description" content="个人博客，不定期更新">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Outis 博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="前言Github Contributions 是我使用Github的乐趣之一，最近因为遇到了一个类似的需求，所以想着自己模仿着做一个。  通过搜索，网上已经有一些实现，但是因为时间久远的原因，使用的好多第三方库的函数已经被移除。 一步一步将 d3.js Calendar View 转变成 GitHub Contributions By alphahinex How to recreate GitH">
+<meta name="keywords" content="d3,github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="仿Github Contributions实现">
+<meta property="og:url" content="http://yoursite.com/2019/09/15/仿GitHubContributions/index.html">
 <meta property="og:site_name" content="Outis 博客">
-<meta property="og:description" content="个人博客，不定期更新">
+<meta property="og:description" content="前言Github Contributions 是我使用Github的乐趣之一，最近因为遇到了一个类似的需求，所以想着自己模仿着做一个。  通过搜索，网上已经有一些实现，但是因为时间久远的原因，使用的好多第三方库的函数已经被移除。 一步一步将 d3.js Calendar View 转变成 GitHub Contributions By alphahinex How to recreate GitH">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhaoyaqiong/picture/master/img/20190916152717.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhaoyaqiong/picture/master/img/20190917101929.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhaoyaqiong/picture/master/img/20190917102110.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhaoyaqiong/picture/master/img/20190917104052.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhaoyaqiong/picture/master/img/20190917104735.png">
+<meta property="og:updated_time" content="2019-09-17T03:12:49.391Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Outis 博客">
-<meta name="twitter:description" content="个人博客，不定期更新">
+<meta name="twitter:title" content="仿Github Contributions实现">
+<meta name="twitter:description" content="前言Github Contributions 是我使用Github的乐趣之一，最近因为遇到了一个类似的需求，所以想着自己模仿着做一个。  通过搜索，网上已经有一些实现，但是因为时间久远的原因，使用的好多第三方库的函数已经被移除。 一步一步将 d3.js Calendar View 转变成 GitHub Contributions By alphahinex How to recreate GitH">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/zhaoyaqiong/picture/master/img/20190916152717.png">
 
 
 
@@ -110,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/15/仿GitHubContributions/">
 
 
 
 
 
-  <title>Outis 博客</title>
+  <title>仿Github Contributions实现 | Outis 博客</title>
   
 
 
@@ -135,8 +143,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -261,9 +268,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -293,9 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/15/仿GitHubContributions/" itemprop="url">仿Github Contributions实现</a></h1>
+          <h1 class="post-title" itemprop="name headline">仿Github Contributions实现</h1>
         
 
         <div class="post-meta">
@@ -367,8 +372,7 @@
       
 
       
-        
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Github Contributions 是我使用Github的乐趣之一，最近因为遇到了一个类似的需求，所以想着自己模仿着做一个。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Github Contributions 是我使用Github的乐趣之一，最近因为遇到了一个类似的需求，所以想着自己模仿着做一个。</p>
 <p><img src="https://raw.githubusercontent.com/zhaoyaqiong/picture/master/img/20190916152717.png" alt></p>
 <p>通过搜索，网上已经有一些实现，但是因为时间久远的原因，使用的好多第三方库的函数已经被移除。</p>
 <p><a href="https://alphahinex.github.io/2015/11/27/transform-d3-calendar-view-to-github-contributions-step-by-step" target="_blank" rel="noopener">一步一步将 d3.js Calendar View 转变成 GitHub Contributions</a> By <a href="https://alphahinex.github.io/" target="_blank" rel="noopener"><strong>alphahinex</strong></a></p>
@@ -378,14 +382,46 @@
 <li>简单的 HTML 和 CSS （因为只是简单的实现</li>
 <li>javascript 以及<a href="https://d3js.org/" target="_blank" rel="noopener">d3.js</a>。d3是javascript的一个库，全称（Data-Driven Documents）主要用来做数据可视化。</li>
 </ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/15/仿GitHubContributions/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<a id="more"></a>
+
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>创建contributions.html文件，引入d3.js，页面的基本样式。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line">		body&#123;</span><br><span class="line">			font-size: 10px;</span><br><span class="line">		&#125;</span><br><span class="line">    /* 之后的样式写在这里 */</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line">	// 之后我们的逻辑代码都会在这里实现</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>我们之后的css样式会在style里，js代码会在下面的script标签中。</p>
+<p>这里，参考<code>Github Contributions</code>的样子。我们定义了Contributions的大小，小的单元格的尺寸，以及默认的填充颜色。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> height = <span class="number">300</span>, width = <span class="number">1386</span>, cellSize = <span class="number">16</span>;</span><br><span class="line"><span class="keyword">let</span> format = d3.timeFormat(<span class="string">"%Y-%m-%d"</span>);</span><br><span class="line"><span class="keyword">let</span> svg = d3.select(<span class="string">"body"</span>)</span><br><span class="line">	.append(<span class="string">"svg"</span>).attr(<span class="string">"width"</span>, width).attr(<span class="string">"height"</span>, height).attr(<span class="string">"class"</span>, <span class="string">"cv"</span>)</span><br><span class="line">	.append(<span class="string">"g"</span>).attr(<span class="string">"transform"</span>, <span class="string">"translate("</span> + ((width - cellSize * <span class="number">53</span>) / <span class="number">2</span>) + <span class="string">","</span> + 	(height - cellSize * <span class="number">7</span>)/<span class="number">2</span> + <span class="string">")"</span>);</span><br><span class="line">	svg.append(<span class="string">'text'</span>).attr(<span class="string">'transform'</span>, <span class="string">'translate(-30,'</span> + cellSize * <span class="number">1.8</span> + <span class="string">')'</span>).attr(<span class="string">'fill'</span>,<span class="string">'#767676'</span>).text(<span class="string">'周一'</span>);</span><br><span class="line">	svg.append(<span class="string">'text'</span>).attr(<span class="string">'transform'</span>, <span class="string">'translate(-30,'</span> + cellSize * <span class="number">3.8</span> + <span class="string">')'</span>).attr(<span class="string">'fill'</span>,<span class="string">'#767676'</span>).text(<span class="string">'周三'</span>);</span><br><span class="line">	svg.append(<span class="string">'text'</span>).attr(<span class="string">'transform'</span>, <span class="string">'translate(-30,'</span> + cellSize * <span class="number">5.8</span> + <span class="string">')'</span>).attr(<span class="string">'fill'</span>,<span class="string">'#767676'</span>).text(<span class="string">'周五'</span>);</span><br><span class="line"><span class="keyword">let</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> lastYear = <span class="keyword">new</span> <span class="built_in">Date</span>(now.getTime() - <span class="number">365</span> * <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span>);</span><br><span class="line"><span class="keyword">let</span> weekOfYear = <span class="number">53</span> - d3.timeWeek.count(d3.timeYear(lastYear), lastYear);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">transformWeek</span>(<span class="params">d</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> year = d.getFullYear();</span><br><span class="line">  <span class="keyword">let</span> thisYear = now.getFullYear();</span><br><span class="line">  <span class="keyword">let</span> weekCount = d3.timeWeek.count(d3.timeYear(d), d);</span><br><span class="line">  <span class="keyword">if</span> (year &lt; thisYear)&#123;</span><br><span class="line">    weekCount = weekCount - <span class="number">53</span> + weekOfYear;</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    weekCount += weekOfYear - <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> weekCount</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> startYear = lastYear.getFullYear();</span><br><span class="line"><span class="keyword">let</span> startMonth = lastYear.getDate() === <span class="number">1</span> ? lastYear.getMonth() : lastYear.getMonth() + <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">12</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">let</span> s = <span class="keyword">new</span> <span class="built_in">Date</span>(startYear, startMonth + i, <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">let</span> w = transformWeek(s) + (s.getDay() &gt; <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>);</span><br><span class="line">  <span class="keyword">if</span> (w &gt; <span class="number">52</span>) &#123;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> m = s.getMonth() + <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">let</span> l = m &gt; <span class="number">9</span> ? m : <span class="string">'0'</span> + m;</span><br><span class="line">  svg.append(<span class="string">'text'</span>).attr(<span class="string">'transform'</span>, <span class="string">'translate('</span> + cellSize * w + <span class="string">', -10)'</span>).attr(<span class="string">'fill'</span>,<span class="string">'#767676'</span>).text(l);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> rect = svg.selectAll(<span class="string">".day"</span>)</span><br><span class="line">  .data(d3.timeDays(lastYear, now))</span><br><span class="line">  .enter().append(<span class="string">"rect"</span>)</span><br><span class="line">  .attr(<span class="string">"class"</span>, <span class="string">"day"</span>)</span><br><span class="line">  .attr(<span class="string">"width"</span>, cellSize)</span><br><span class="line">  .attr(<span class="string">"height"</span>, cellSize)</span><br><span class="line">  .attr(<span class="string">"x"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123; <span class="keyword">return</span> transformWeek(d) * cellSize; &#125;)</span><br><span class="line">  .attr(<span class="string">"y"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123; <span class="keyword">return</span> d.getDay() * cellSize; &#125;)</span><br><span class="line">  .attr(<span class="string">"data-count"</span>, <span class="number">0</span>)</span><br><span class="line">  .attr(<span class="string">"data-date"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123; <span class="keyword">return</span> format(d)&#125;)</span><br><span class="line">  .attr(<span class="string">"fill"</span>,<span class="string">"#ebedf0"</span>)</span><br><span class="line">  .datum(format);</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，在alphahinex前辈的博文中，使用到几个函数，d3.js已经移除。我在自己的实现中也进行了相应的替换。</p>
+<ul>
+<li><code>d3.time.weekOfYear(d)</code> -&gt; <code>d3.timeWeek.count(d3.timeYear(d), d)</code></li>
+<li><code>d3.time.days(time1, time2)</code>-&gt;<code>d3.timeDays(time1, time2)</code></li>
+<li><code>d3.time.format(&quot;%Y-%m-%d&quot;)</code>-&gt;<code>d3.timeFormat(%Y-%m-%d)</code></li>
+</ul>
+<p>上述代码完成后，基本的形状已经大致出来了</p>
+<p><img src="https://raw.githubusercontent.com/zhaoyaqiong/picture/master/img/20190917101929.png" alt></p>
+<p>但是，单元格都连成一片，我们需要添加样式，将单元格进行一定的区分。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.day</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">13px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">13px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.day</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">stroke-width</span>: <span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">stroke</span>: <span class="number">#f4a460</span>;</span><br><span class="line">  <span class="attribute">stroke-linecap</span>: round;</span><br><span class="line">  <span class="attribute">vector-effect</span>: non-scaling-stroke;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/zhaoyaqiong/picture/master/img/20190917102110.png" alt></p>
+<p>现在，样子已经和Github Contributions基本一致了，我们需要对单元格进行染色了。</p>
+<p>在我们的js代码下继续添加</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> data = &#123;</span><br><span class="line">		<span class="string">'2019-08-31'</span>: <span class="number">1</span>,<span class="string">'2019-09-01'</span>: <span class="number">2</span>,<span class="string">'2019-09-02'</span>: <span class="number">3</span>,<span class="string">'2019-09-03'</span>: <span class="number">4</span>,<span class="string">'2019-09-04'</span>: <span class="number">5</span>,</span><br><span class="line">		<span class="string">'2019-09-05'</span>: <span class="number">5</span>,<span class="string">'2019-09-06'</span>: <span class="number">6</span>,<span class="string">'2019-09-07'</span>: <span class="number">7</span>,<span class="string">'2019-09-08'</span>: <span class="number">8</span>,<span class="string">'2019-09-09'</span>: <span class="number">9</span>,</span><br><span class="line">		<span class="string">'2019-09-10'</span>: <span class="number">11</span>,<span class="string">'2019-09-11'</span>: <span class="number">12</span>,<span class="string">'2019-09-12'</span>: <span class="number">13</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">let</span> colorMap = &#123;</span><br><span class="line">		<span class="number">1</span>: <span class="string">'#c6e48b'</span>,</span><br><span class="line">		<span class="number">2</span>: <span class="string">'#7bc96f'</span>,</span><br><span class="line">		<span class="number">3</span>: <span class="string">'#239a3b'</span>,</span><br><span class="line">		<span class="number">4</span>: <span class="string">'#196127'</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>模拟出了十几天的数据，同时，我也在github上，对于几种颜色进行了提取。</p>
+<p><img src="https://raw.githubusercontent.com/zhaoyaqiong/picture/master/img/20190917104052.png" alt></p>
+<p>我们需要定义一个Contributions到颜色的转换</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> transformColor = d3.scaleQuantize().domain([<span class="number">1</span>, <span class="number">13</span>]).range(d3.range(<span class="number">1</span>,<span class="number">5</span>).map(<span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123; <span class="keyword">return</span> colorMap[d]; &#125;));</span><br></pre></td></tr></table></figure>
+
+<p>同时，这里的<code>d3.scaleQuantize</code> 也是d3版本之前<code>d3.scale.quantize()</code>的替换。</p>
+<p>在对颜色进行了线性转换后，我们就需要操作单元格，进行填充了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rect.filter(<span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123; <span class="keyword">return</span> d <span class="keyword">in</span> data; &#125;)</span><br><span class="line">		.attr(<span class="string">"data-count"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123; <span class="keyword">return</span> data[d]&#125;)</span><br><span class="line">		.attr(<span class="string">"fill"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123; <span class="keyword">return</span> transformColor(data[d])&#125;)</span><br><span class="line">		.append(<span class="string">"title"</span>).text(<span class="function"><span class="keyword">function</span> (<span class="params">d</span>) </span>&#123;<span class="keyword">return</span> data[d] + <span class="string">' contributions on '</span> + d&#125;)</span><br><span class="line">	rect.filter(<span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123; <span class="keyword">return</span> !(d <span class="keyword">in</span> data); &#125;)</span><br><span class="line">		.append(<span class="string">"title"</span>).text(<span class="function"><span class="keyword">function</span> (<span class="params">d</span>) </span>&#123;<span class="keyword">return</span> <span class="string">'No contributions on '</span> + d&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>在填充过后，还对单元格进行了一个鼠标悬浮的文字显示的操作。对于没有数据的单元格，也统一进行了操作。至此，一个仿Github Contributions的小玩意终于也完成了。</p>
+<p>忘了图</p>
+<p>补一个效果图：</p>
+<p><img src="https://raw.githubusercontent.com/zhaoyaqiong/picture/master/img/20190917104735.png" alt></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>d3.js 作为一个强大的数据可视化的库，值得深入学习一下。</p>
+
       
     </div>
     
@@ -395,166 +431,72 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>谢谢, 🎉</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Outis 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Outis 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/05/CTF入坑/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Outis">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Outis 博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/05/CTF入坑/" itemprop="url">CTF入坑</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-05T17:17:30+08:00">
-                2019-09-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CTF入坑之路/" itemprop="url" rel="index">
-                    <span itemprop="name">CTF入坑之路</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/d3/" rel="tag"># d3</a>
           
-
+            <a href="/tags/github/" rel="tag"># github</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h1 id="CTF入坑"><a href="#CTF入坑" class="headerlink" title="CTF入坑"></a>CTF入坑</h1><p>一直对网络安全比较感兴趣，但是大学期间没怎么研究过。这次机缘巧合下，决心下功夫研究研究，万一之后转了安全方面呢。</p>
-<p>开一个Blog记录一下踩坑，踩雷的历程吧。希望多年后的我看见当初这篇博客能够漏出一个比较开心的笑容吧。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/05/CTF入坑/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/05/CTF入坑/" rel="next" title="CTF入坑">
+                <i class="fa fa-chevron-left"></i> CTF入坑
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -564,10 +506,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -575,6 +518,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NjQ4OS8yMzAwMA=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -595,8 +547,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -680,6 +641,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">2.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">3.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -807,6 +784,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -835,6 +816,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

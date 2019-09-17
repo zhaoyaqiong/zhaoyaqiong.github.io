@@ -74,7 +74,7 @@
 <meta name="description" content="个人博客，不定期更新">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Outis 博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/d3/index.html">
 <meta property="og:site_name" content="Outis 博客">
 <meta property="og:description" content="个人博客，不定期更新">
 <meta property="og:locale" content="zh-Hans">
@@ -110,13 +110,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/tags/d3/">
 
 
 
 
 
-  <title>Outis 博客</title>
+  <title>标签: d3 | Outis 博客</title>
   
 
 
@@ -135,8 +135,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -261,311 +260,51 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
+
+  
+  
+  
+  <div class="post-block tag">
+
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>d3<small>标签</small>
+        </h1>
+      </div>
+
       
-
-  
-
-  
-  
-  
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/15/仿GitHubContributions/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Outis">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Outis 博客">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/15/仿GitHubContributions/" itemprop="url">仿Github Contributions实现</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2019/09/15/仿GitHubContributions/" itemprop="url">
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="name">仿Github Contributions实现</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-15T13:39:54+08:00">
-                2019-09-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Github Contributions 是我使用Github的乐趣之一，最近因为遇到了一个类似的需求，所以想着自己模仿着做一个。</p>
-<p><img src="https://raw.githubusercontent.com/zhaoyaqiong/picture/master/img/20190916152717.png" alt></p>
-<p>通过搜索，网上已经有一些实现，但是因为时间久远的原因，使用的好多第三方库的函数已经被移除。</p>
-<p><a href="https://alphahinex.github.io/2015/11/27/transform-d3-calendar-view-to-github-contributions-step-by-step" target="_blank" rel="noopener">一步一步将 d3.js Calendar View 转变成 GitHub Contributions</a> By <a href="https://alphahinex.github.io/" target="_blank" rel="noopener"><strong>alphahinex</strong></a></p>
-<p><a href="https://hackernoon.com/how-to-recreate-githubs-contribution-graph-a0a8d4d91011" target="_blank" rel="noopener">How to recreate GitHub’s contribution graph</a> By <a href="https://hackernoon.com/@vinnyoodles" target="_blank" rel="noopener"><strong>Vincent Le</strong></a></p>
-<p>本文就将参照两位前辈的博文，进行一些改进。</p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ol>
-<li>简单的 HTML 和 CSS （因为只是简单的实现</li>
-<li>javascript 以及<a href="https://d3js.org/" target="_blank" rel="noopener">d3.js</a>。d3是javascript的一个库，全称（Data-Driven Documents）主要用来做数据可视化。</li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/15/仿GitHubContributions/#more" rel="contents">
-              阅读全文 &raquo;
             </a>
-          </div>
-          <!--/noindex-->
         
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-09-15T13:39:54+08:00" content="2019-09-15">
+          09-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
       
     </div>
-    
-    
-    
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
   
   
   
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/05/CTF入坑/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Outis">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Outis 博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/05/CTF入坑/" itemprop="url">CTF入坑</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-05T17:17:30+08:00">
-                2019-09-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CTF入坑之路/" itemprop="url" rel="index">
-                    <span itemprop="name">CTF入坑之路</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="CTF入坑"><a href="#CTF入坑" class="headerlink" title="CTF入坑"></a>CTF入坑</h1><p>一直对网络安全比较感兴趣，但是大学期间没怎么研究过。这次机缘巧合下，决心下功夫研究研究，万一之后转了安全方面呢。</p>
-<p>开一个Blog记录一下踩坑，踩雷的历程吧。希望多年后的我看见当初这篇博客能够漏出一个比较开心的笑容吧。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/05/CTF入坑/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
 
